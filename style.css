@@ -48,27 +48,43 @@ img {
 
 /*start editing for exercise below */
 .grid {
-  
+  display: grid;
+  grid-template-areas: 
+    "mudkip mudkip"
+    "piplup piplup"
+    "chimchar chimchar"
+    "cyndaquil cyndaquil"
+    "torchic torchic"
+  grid-template-columns: 200px 300px;
+  grid-template-rows: 150px 200px 300px 200px;
+  justify-items: center;
+  width: 600px;
+  justify-content: end;
+  align-items: stretch;
+  /*height: 1000px;*/
+  align-content: center;
+  grid-auto-rows: 150px;
 }
 
 .mudkip  {
- 
+  grid-area: mudkip;
+  justify-self: end;
 }
 
 .piplup {
-
+  grid-area: piplup;
 }
 
 .chimchar {
-
+  grid-area: chimchar;
 }
 
 .cyndaquil {
- 
+ grid-area: cyndaquil;
 }
 
 .torchic{
-  
+  grid-area: torchic;
 }
 
 .overlap-grid {
@@ -76,14 +92,15 @@ img {
   grid-template: repeat(4, 20px) / repeat(4, 1fr);}
 
 .one {
-
+  grid-area: 1 / 1 / 5 / 3;
 }
 
 .two {
-
+  grid-area: 1 / 3 / 5 / 5;
 }
 
 .over {
-
+  grid-area: 2 / 2 / 4 / 4;
+  z-index: 10;
 }
 
